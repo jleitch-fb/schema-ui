@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 
-export interface Data { }
-export interface Schema {
-    factory: () => any;
-    render: (data: any, setData: (value: any) => void) => ReactElement;
+export interface Schema<T> {
+    factory: () => T;
+    render: (data: T, setData: (value: T) => void) => ReactElement;
 }

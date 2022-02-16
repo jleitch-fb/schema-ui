@@ -2,7 +2,7 @@ import { Schema } from "./schema";
 
 export interface BooleanSchemaProps { }
 
-export function BooleanSchema(props?: BooleanSchemaProps): Schema {
+export function BooleanSchema(props?: BooleanSchemaProps): Schema<boolean> {
     // const { } = props ?? {};
 
     return {

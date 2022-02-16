@@ -5,7 +5,7 @@ export interface NumberSchemaProps {
     max?: number
 }
 
-export function NumberSchema(props?: NumberSchemaProps): Schema {
+export function NumberSchema(props?: NumberSchemaProps): Schema<number> {
     const { min, max } = props ?? {};
 
     return {

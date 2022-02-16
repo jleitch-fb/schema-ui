@@ -4,7 +4,7 @@ export interface StringSchemaProps {
     reverse?: boolean
 }
 
-export function StringSchema(props?: StringSchemaProps): Schema {
+export function StringSchema(props?: StringSchemaProps): Schema<string> {
     const { reverse } = props ?? {};
 
     return {

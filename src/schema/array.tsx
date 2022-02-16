@@ -1,9 +1,9 @@
 import { Schema } from "./schema";
 
-export function ArraySchema(elementSchema: Schema): Schema {
+export function ArraySchema<T>(elementSchema: Schema<T>): Schema<T[]> {
     return {
         factory: () => [],
-        render: (data: Array<any>, setData: (value: Array<any>) => void) => (
+        render: (data: Array<T>, setData: (value: Array<T>) => void) => (
             <div>
                 <button onClick={() => setData([...data, elementSchema.factory()])}>+</button>
                 <div>

@@ -6,6 +6,6 @@ export interface BuffData {
     name: string,
 }
 
-export const BuffSchema: Schema = StructSchema<BuffData>({
+export const BuffSchema: Schema<BuffData> = StructSchema<BuffData>({
     name: StringSchema(),
 });
