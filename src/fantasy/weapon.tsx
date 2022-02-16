@@ -1,0 +1,20 @@
+import { BuffData, BuffSchema } from "./buff";
+import { Data, Schema } from "../schema/schema";
+import { NumberSchema } from "../schema/number";
+import { StringSchema } from "../schema/string";
+import { StructSchema } from "../schema/struct";
+import { ArraySchema } from "../schema/array";
+
+export interface WeaponData extends Data {
+    type: string,
+    name: string,
+    damage: number,
+    buffs: BuffData[]
+}
+
+export const WeaponSchema: Schema = StructSchema<WeaponData>({
+    type: StringSchema(),
+    name: StringSchema(),
+    damage: NumberSchema(),
+    buffs: ArraySchema(BuffSchema)
+});
